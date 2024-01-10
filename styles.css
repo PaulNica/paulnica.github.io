@@ -1,0 +1,86 @@
+body {
+    font-family: monospace;
+    background-color: ghostwhite;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: darkturquoise;
+    padding: 0;
+    margin-bottom: 0.2em;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: lighter;
+    color: steelblue;
+    padding: 0 0 15px 0;
+    margin: 0;
+}
+
+h2.content-title {
+    color: lightseagreen;
+    font-size: 33px;
+    text-align: center;
+}
+
+.header {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: 1px solid darkturquoise;
+}
+
+table {
+    width: 700px;
+    margin: 0 auto;
+    border: 1px solid lightseagreen;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+.code {
+    background-color: darkturquoise;
+}
+
+.usecase {
+    color: darkturquoise;
+    font-weight: bold;
+}
+
+tbody {
+    background-color: white;
+}
+
+td,
+th {
+    border: 1px solid white;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+.exp {
+    background-color: rgb(46, 85, 85);
+    color: white;
+}
+
+.examples td {
+    background-color: paleturquoise;
+    text-align: center;
+    color: black;
+}
+
+footer {
+    margin-top: 40px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    line-height: 0;
+}
