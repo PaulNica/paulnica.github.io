@@ -44,7 +44,7 @@ html body {
   }
 
   .nav p {
-    margin:0 2rem 3rem;
+    margin:0 2rem 1rem;
   }
 
   .nav a {
@@ -143,7 +143,7 @@ html body {
   }
 
   section.profile {
-    height: 20rem;
+    height: 23rem;
     display: flex;
     justify-content: center;
   }
@@ -169,4 +169,63 @@ html body {
     font-size: 8rem;
     font-family: 'BDScript-Regular';
     transform: rotate(350deg);
+  }
+
+  .profile-pic img {
+    --b: 4px;  /* border thickness*/
+    --s: 30px; /* size of the corner*/
+    --g: 10px; /* the gap*/
+    --c: #e2334b; 
+    
+    padding: calc(var(--b) + var(--g));
+    background-image:
+      conic-gradient(from  90deg at top    var(--b) left  var(--b),#0000 25%,var(--c) 0),
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),#0000 25%,var(--c) 0);
+    background-position:
+      var(--_p,0%) var(--_p,0%),
+      calc(100% - var(--_p,0%)) calc(100% - var(--_p,0%));
+    background-size: var(--s) var(--s);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 
+      background-position .3s var(--_i,.3s), 
+      background-size .3s calc(.3s - var(--_i,.3s));
+  }
+  .profile-pic img  {
+    background-image:
+      conic-gradient(from 180deg at top    var(--b) right var(--b),#0000 25%,var(--c) 0),
+      conic-gradient(from   0deg at bottom var(--b) left  var(--b),#0000 25%,var(--c) 0);
+    background-position:
+      calc(100% - var(--_p,0%)) var(--_p,0%),
+      var(--_p,0%) calc(100% - var(--_p,0%));
+  }
+  .profile-pic img:hover {
+    background-size: calc(100% - var(--g)) calc(100% - var(--g));
+    --_p: calc(var(--g)/2);
+    --_i: 0s;
+  }
+
+  .collapsible {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    /* width: 100%; */
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .content {
+    padding: 0 35px;
+    display: none;
+    overflow: hidden;
+    background-color: #e1334b;
+    text-align: left;
+    margin: 0 2rem 1rem;
+  }
+
+  .active, .collapsible:hover {
+    background-color: #000;
   }

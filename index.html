@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./style.css"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
   <body>
     <header class="container">
         <div class="row">
-          <p class="logo"><a href="./index.html"><img src="./resources/logo-r.svg" alt="logo"></a></p>
+          <p class="logo animate__animated animate__swing animate__delay-1s"><a href="./index.html"><img src="./resources/logo-r.svg" alt="logo"></a></p>
         </div>
         <div class="row">
           <p class="jd">web developer</p>
@@ -23,14 +24,14 @@
       </header>
 
       <section class="profile" style="position: relative;">
-        <p class="profile-pic" style="position: absolute;top: 0;transform: translateX(50%);right: 50%;"><img src="./resources/profile-pic.jpg" alt="authors picture"></p>
-        <p class="oval" style="position: absolute;top: 27px;transform: translateX(50%);right: 50%;"><img src="./resources/oval_1.svg" alt="black oval"></p>
+        <p class="profile-pic animate__animated animate__zoomIn" style="position: absolute;top: 0;transform: translateX(50%);right: 50%;"><img src="./resources/profile-pic.jpg" alt="authors picture"></p>
+        <p class="oval animate__animated animate__fadeInLeft" style="position: absolute;top: 47px;transform: translateX(50%);right: 37%;"><img src="./resources/oval_1.svg" alt="black oval"></p>
       </section>
 
     <section class="container">
       <nav class="row text-center nav">
         <p><a href="#">about</a></p>
-        <p><a href="#">projects</a></p>
+        <p><a href="#">projects</a></p>          
         <p><a href="#">contact</a></p>
       </nav>
     </section>
@@ -51,4 +52,5 @@
         </div>
       </footer>
   </body>
+  <script src="./script.js"></script>
 </html>
