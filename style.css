@@ -179,7 +179,7 @@ html body {
 
   p.jd {
     color: #000000;
-    font-size: 8rem;
+    font-size: 7rem;
     font-family: 'BDScript-Regular';
     transform: rotate(350deg);
   }
@@ -250,7 +250,7 @@ html body {
   }
   
   .word:hover::before {
-    content: 'This is not clickable! Go to CONTACT section.';
+    content: 'Not here, press on CONTACT!';
     color: #000000;
     font-style: italic;
     font-size: smaller;
@@ -323,3 +323,4 @@ html body {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
+
