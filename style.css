@@ -26,8 +26,21 @@ html body {
   }
   
   header h1 {
-    font-weight: 700;
+    font-family: 'Montserrat',sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5px;
     margin: 0;
+    padding-top: 5rem;
+  }
+
+  .about-me p {
+    font-size: 1.3rem;
+    padding-top: 2rem;
+  }
+
+  .about-me p:last-child {
+    margin-bottom: 3rem;
   }
   
   header nav {
@@ -229,3 +242,84 @@ html body {
   .active, .collapsible:hover {
     background-color: #000;
   }
+
+  .word::before {
+    position: relative;
+    content: 'Let us connect!';
+    color: #e1334b;
+  }
+  
+  .word:hover::before {
+    content: 'This is not clickable! Go to CONTACT section.';
+    color: #000000;
+    font-style: italic;
+    font-size: smaller;
+  }
+
+  /* MAIN STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[data-split],
+[data-split] span {
+  display: inline-block;
+}
+
+[data-split] .inner {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-split] .back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+[data-split] .char {
+  transition: all 0.4s cubic-bezier(0.4, 0.63, 0.4, 1.02);
+  transition-delay: calc(0.015s * var(--index));
+}
+
+[data-split] .back .char {
+  opacity: 0;
+  /*we use 101% instead of 100% just to be safe that the characters won't appear depending on the font family*/
+  transform: translateY(101%) skewX(55deg);
+}
+
+[data-split-type="hover"] .char {
+  transition-duration: 0.25s;
+}
+
+[data-split-type="scroll"].is-animated .back .char,
+[data-split-type="hover"]:hover .back .char {
+  opacity: 1;
+  transform: none;
+}
+
+[data-split-type="scroll"].is-animated .front .char,
+[data-split-type="hover"]:hover .front .char {
+  opacity: 0;
+  transform: translateY(-101%) skewX(-55deg);
+}
+
+@keyframes example {
+  0%   {bottom: 0;left: 0;}
+  20%  {bottom: 100px;left: 100px;}
+  40%  {bottom: 200px;left: 200px;}
+  50%  {bottom: 200px;left: 200px;transform: rotate(180deg);}
+  80% {bottom: 100px;left: 100px;transform: rotate(180deg);}
+  90% {bottom: 0px;left: 0px;transform: rotate(180deg);}
+  100% {bottom: 0px;left: 0px;}
+}
+
+#rocket {
+  position: relative;
+  animation-name: example;
+  animation-duration: .9s;
+  animation-delay: 19s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
