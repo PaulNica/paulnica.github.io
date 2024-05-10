@@ -54,10 +54,11 @@ html body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     letter-spacing: 1px;
+    flex-wrap: nowrap!important;
   }
 
   .nav p {
-    margin:0 2rem 1rem;
+    margin:0 1.5rem 1rem;
   }
 
   .nav a {
@@ -66,6 +67,11 @@ html body {
 
   .nav a:hover {
     color: #000000;
+  }
+
+  .col-sm-1 {
+    display: flex;
+    justify-content: center;
   }
 
   ul.col-sm-12 {
@@ -324,3 +330,8 @@ html body {
   animation-fill-mode: both;
 }
 
+@media screen and (max-width: 395px) {
+  p.jd {
+    font-size: 5rem;
+  }
+}
